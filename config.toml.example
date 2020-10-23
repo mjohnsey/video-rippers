@@ -1,0 +1,12 @@
+library_location = "/Volumes/media/movies"
+handbrake_preset = "Fast 1080p30"
+[server]
+port=8999
+
+[plex]
+hostname="192.168.1.20"
+port="32400"
+auth_key="NONEYA"
+
+[makemkv]
+default_source="disc:0"

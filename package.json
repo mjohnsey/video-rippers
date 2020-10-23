@@ -1,0 +1,65 @@
+{
+  "name": "@mjohnsey/video-rippers",
+  "version": "0.0.1",
+  "author": "Michael Johnsey @mjohnsey",
+  "bin": {
+    "video-rippers": "./bin/run"
+  },
+  "bugs": "https://github.com/mjohnsey/video-rippers/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "@overnightjs/core": "^1.6.9",
+    "@overnightjs/logger": "^1.1.9",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http-status-codes": "^1.3.2",
+    "lodash": "^4.17.15",
+    "toml": "^3.0.0",
+    "tslib": "^1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/tslint": "^3",
+    "@types/express": "^4.17.1",
+    "@types/lodash": "^4.14.138",
+    "@types/node": "^10",
+    "globby": "^10",
+    "ts-node": "^8",
+    "tslint": "^6.1.3",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/mjohnsey/video-rippers",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "video-rippers",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "mjohnsey/video-rippers",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
